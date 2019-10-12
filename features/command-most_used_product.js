@@ -55,7 +55,7 @@ module.exports = function (controller) {
                     "average response time for 'GetVehicle' of the API, sessions","average response time for GetVehicle of the API, sessions"], 
                     'direct_message,direct_mention', function (bot, message) {
 
-        settings.data =  "data": "{ \r\n\"query\": \"let dt = now(); AzureDiagnostics | summarize count(), avg(DurationMs) by bin(TimeGenerated, 24h), operationId_s, apiId_s | where datetime_part('day', dt) == datetime_part('day', TimeGenerated) | where operationId_s=='GetVehicle' and apiId_s=='sessions' ;\", \"timespan\": \"PT24H\"\r\n\t\r\n}";
+        settings.data =  "{ \r\n\"query\": \"let dt = now(); AzureDiagnostics | summarize count(), avg(DurationMs) by bin(TimeGenerated, 24h), operationId_s, apiId_s | where datetime_part('day', dt) == datetime_part('day', TimeGenerated) | where operationId_s=='GetVehicle' and apiId_s=='sessions' ;\", \"timespan\": \"PT24H\"\r\n\t\r\n}";
 
         var r = $.ajax(settings);
 
@@ -81,7 +81,7 @@ module.exports = function (controller) {
                     "average response time for 'GetVehicle' of the API, client-gateway-users","average response time for GetVehicle of the API, client-gateway-users"], 
                     'direct_message,direct_mention', function (bot, message) {
 
-        settings.data =  "data": "{ \r\n\"query\": \"let dt = now(); AzureDiagnostics | summarize count(), avg(DurationMs) by bin(TimeGenerated, 24h), operationId_s, apiId_s | where datetime_part('day', dt) == datetime_part('day', TimeGenerated) | where operationId_s=='GetVehicle' and apiId_s=='client-gateway-users' ;\", \"timespan\": \"PT24H\"\r\n\t\r\n}";
+        settings.data =  "{ \r\n\"query\": \"let dt = now(); AzureDiagnostics | summarize count(), avg(DurationMs) by bin(TimeGenerated, 24h), operationId_s, apiId_s | where datetime_part('day', dt) == datetime_part('day', TimeGenerated) | where operationId_s=='GetVehicle' and apiId_s=='client-gateway-users' ;\", \"timespan\": \"PT24H\"\r\n\t\r\n}";
 
         var r = $.ajax(settings);
 
@@ -107,7 +107,7 @@ module.exports = function (controller) {
                     "average response time for 'GetVehicle' of the API, vehicles","average response time for GetVehicle of the API, vehicles"], 
                     'direct_message,direct_mention', function (bot, message) {
 
-        settings.data =  "data": "{ \r\n\"query\": \"let dt = now(); AzureDiagnostics | summarize count(), avg(DurationMs) by bin(TimeGenerated, 24h), operationId_s, apiId_s | where datetime_part('day', dt) == datetime_part('day', TimeGenerated) | where operationId_s=='GetVehicle' and apiId_s=='vehicles' ;\", \"timespan\": \"PT24H\"\r\n\t\r\n}";
+        settings.data = "{ \r\n\"query\": \"let dt = now(); AzureDiagnostics | summarize count(), avg(DurationMs) by bin(TimeGenerated, 24h), operationId_s, apiId_s | where datetime_part('day', dt) == datetime_part('day', TimeGenerated) | where operationId_s=='GetVehicle' and apiId_s=='vehicles' ;\", \"timespan\": \"PT24H\"\r\n\t\r\n}";
 
         var r = $.ajax(settings);
 
@@ -158,7 +158,7 @@ module.exports = function (controller) {
                     "average response time for 'GetAuthorizationStatus' of the API, sessions","average response time for GetAuthorizationStatus of the API, sessions"], 
                     'direct_message,direct_mention', function (bot, message) {
 
-        settings.data =  "data": "{ \r\n\"query\": \"let dt = now(); AzureDiagnostics | summarize count(), avg(DurationMs) by bin(TimeGenerated, 24h), operationId_s, apiId_s | where datetime_part('day', dt) == datetime_part('day', TimeGenerated) | where operationId_s=='GetAuthorizationStatus' and apiId_s=='sessions' ;\", \"timespan\": \"PT24H\"\r\n\t\r\n}";
+        settings.data =  "{ \r\n\"query\": \"let dt = now(); AzureDiagnostics | summarize count(), avg(DurationMs) by bin(TimeGenerated, 24h), operationId_s, apiId_s | where datetime_part('day', dt) == datetime_part('day', TimeGenerated) | where operationId_s=='GetAuthorizationStatus' and apiId_s=='sessions' ;\", \"timespan\": \"PT24H\"\r\n\t\r\n}";
 
         var r = $.ajax(settings);
 
@@ -184,7 +184,7 @@ module.exports = function (controller) {
                     "average response time for 'GetAuthorizationStatus' of the API, client-gateway-users","average response time for GetAuthorizationStatus of the API, client-gateway-users"], 
                     'direct_message,direct_mention', function (bot, message) {
 
-        settings.data =  "data": "{ \r\n\"query\": \"let dt = now(); AzureDiagnostics | summarize count(), avg(DurationMs) by bin(TimeGenerated, 24h), operationId_s, apiId_s | where datetime_part('day', dt) == datetime_part('day', TimeGenerated) | where operationId_s=='GetAuthorizationStatus' and apiId_s=='client-gateway-users' ;\", \"timespan\": \"PT24H\"\r\n\t\r\n}";
+        settings.data = "{ \r\n\"query\": \"let dt = now(); AzureDiagnostics | summarize count(), avg(DurationMs) by bin(TimeGenerated, 24h), operationId_s, apiId_s | where datetime_part('day', dt) == datetime_part('day', TimeGenerated) | where operationId_s=='GetAuthorizationStatus' and apiId_s=='client-gateway-users' ;\", \"timespan\": \"PT24H\"\r\n\t\r\n}";
 
         var r = $.ajax(settings);
 
@@ -210,7 +210,7 @@ module.exports = function (controller) {
                     "average response time for 'GetAuthorizationStatus' of the API, vehicles","average response time for GetAuthorizationStatus of the API, vehicles"], 
                     'direct_message,direct_mention', function (bot, message) {
 
-        settings.data =  "data": "{ \r\n\"query\": \"let dt = now(); AzureDiagnostics | summarize count(), avg(DurationMs) by bin(TimeGenerated, 24h), operationId_s, apiId_s | where datetime_part('day', dt) == datetime_part('day', TimeGenerated) | where operationId_s=='GetAuthorizationStatus' and apiId_s=='vehicles' ;\", \"timespan\": \"PT24H\"\r\n\t\r\n}";
+        settings.data =  "{ \r\n\"query\": \"let dt = now(); AzureDiagnostics | summarize count(), avg(DurationMs) by bin(TimeGenerated, 24h), operationId_s, apiId_s | where datetime_part('day', dt) == datetime_part('day', TimeGenerated) | where operationId_s=='GetAuthorizationStatus' and apiId_s=='vehicles' ;\", \"timespan\": \"PT24H\"\r\n\t\r\n}";
 
         var r = $.ajax(settings);
 
@@ -261,7 +261,7 @@ module.exports = function (controller) {
                     "average response time for 'GetUserProfile' of the API, sessions","average response time for GetUserProfile of the API, sessions"], 
                     'direct_message,direct_mention', function (bot, message) {
 
-        settings.data =  "data": "{ \r\n\"query\": \"let dt = now(); AzureDiagnostics | summarize count(), avg(DurationMs) by bin(TimeGenerated, 24h), operationId_s, apiId_s | where datetime_part('day', dt) == datetime_part('day', TimeGenerated) | where operationId_s=='GetUserProfile' and apiId_s=='sessions' ;\", \"timespan\": \"PT24H\"\r\n\t\r\n}";
+        settings.data =  "{ \r\n\"query\": \"let dt = now(); AzureDiagnostics | summarize count(), avg(DurationMs) by bin(TimeGenerated, 24h), operationId_s, apiId_s | where datetime_part('day', dt) == datetime_part('day', TimeGenerated) | where operationId_s=='GetUserProfile' and apiId_s=='sessions' ;\", \"timespan\": \"PT24H\"\r\n\t\r\n}";
 
         var r = $.ajax(settings);
 
@@ -287,7 +287,7 @@ module.exports = function (controller) {
                     "average response time for 'GetUserProfile' of the API, client-gateway-users","average response time for GetUserProfile of the API, client-gateway-users"], 
                     'direct_message,direct_mention', function (bot, message) {
 
-        settings.data =  "data": "{ \r\n\"query\": \"let dt = now(); AzureDiagnostics | summarize count(), avg(DurationMs) by bin(TimeGenerated, 24h), operationId_s, apiId_s | where datetime_part('day', dt) == datetime_part('day', TimeGenerated) | where operationId_s=='GetUserProfile' and apiId_s=='client-gateway-users' ;\", \"timespan\": \"PT24H\"\r\n\t\r\n}";
+        settings.data =  "{ \r\n\"query\": \"let dt = now(); AzureDiagnostics | summarize count(), avg(DurationMs) by bin(TimeGenerated, 24h), operationId_s, apiId_s | where datetime_part('day', dt) == datetime_part('day', TimeGenerated) | where operationId_s=='GetUserProfile' and apiId_s=='client-gateway-users' ;\", \"timespan\": \"PT24H\"\r\n\t\r\n}";
 
         var r = $.ajax(settings);
 
@@ -313,7 +313,7 @@ module.exports = function (controller) {
                     "average response time for 'GetUserProfile' of the API, vehicles","average response time for GetUserProfile of the API, vehicles"], 
                     'direct_message,direct_mention', function (bot, message) {
 
-        settings.data =  "data": "{ \r\n\"query\": \"let dt = now(); AzureDiagnostics | summarize count(), avg(DurationMs) by bin(TimeGenerated, 24h), operationId_s, apiId_s | where datetime_part('day', dt) == datetime_part('day', TimeGenerated) | where operationId_s=='GetUserProfile' and apiId_s=='vehicles' ;\", \"timespan\": \"PT24H\"\r\n\t\r\n}";
+        settings.data =   "{ \r\n\"query\": \"let dt = now(); AzureDiagnostics | summarize count(), avg(DurationMs) by bin(TimeGenerated, 24h), operationId_s, apiId_s | where datetime_part('day', dt) == datetime_part('day', TimeGenerated) | where operationId_s=='GetUserProfile' and apiId_s=='vehicles' ;\", \"timespan\": \"PT24H\"\r\n\t\r\n}";
 
         var r = $.ajax(settings);
 
@@ -364,7 +364,7 @@ module.exports = function (controller) {
                     "average response time for 'GetSecurityQuestions' of the API, sessions","average response time for GetSecurityQuestions of the API, sessions"], 
                     'direct_message,direct_mention', function (bot, message) {
 
-        settings.data =  "data": "{ \r\n\"query\": \"let dt = now(); AzureDiagnostics | summarize count(), avg(DurationMs) by bin(TimeGenerated, 24h), operationId_s, apiId_s | where datetime_part('day', dt) == datetime_part('day', TimeGenerated) | where operationId_s=='GetSecurityQuestions' and apiId_s=='sessions' ;\", \"timespan\": \"PT24H\"\r\n\t\r\n}";
+        settings.data =   "{ \r\n\"query\": \"let dt = now(); AzureDiagnostics | summarize count(), avg(DurationMs) by bin(TimeGenerated, 24h), operationId_s, apiId_s | where datetime_part('day', dt) == datetime_part('day', TimeGenerated) | where operationId_s=='GetSecurityQuestions' and apiId_s=='sessions' ;\", \"timespan\": \"PT24H\"\r\n\t\r\n}";
 
         var r = $.ajax(settings);
 
@@ -390,7 +390,7 @@ module.exports = function (controller) {
                     "average response time for 'GetSecurityQuestions' of the API, client-gateway-users","average response time for GetSecurityQuestions of the API, client-gateway-users"], 
                     'direct_message,direct_mention', function (bot, message) {
 
-        settings.data =  "data": "{ \r\n\"query\": \"let dt = now(); AzureDiagnostics | summarize count(), avg(DurationMs) by bin(TimeGenerated, 24h), operationId_s, apiId_s | where datetime_part('day', dt) == datetime_part('day', TimeGenerated) | where operationId_s=='GetSecurityQuestions' and apiId_s=='client-gateway-users' ;\", \"timespan\": \"PT24H\"\r\n\t\r\n}";
+        settings.data =  "{ \r\n\"query\": \"let dt = now(); AzureDiagnostics | summarize count(), avg(DurationMs) by bin(TimeGenerated, 24h), operationId_s, apiId_s | where datetime_part('day', dt) == datetime_part('day', TimeGenerated) | where operationId_s=='GetSecurityQuestions' and apiId_s=='client-gateway-users' ;\", \"timespan\": \"PT24H\"\r\n\t\r\n}";
 
         var r = $.ajax(settings);
 
@@ -416,7 +416,7 @@ module.exports = function (controller) {
                     "average response time for 'GetSecurityQuestions' of the API, vehicles","average response time for GetSecurityQuestions of the API, vehicles"], 
                     'direct_message,direct_mention', function (bot, message) {
 
-        settings.data =  "data": "{ \r\n\"query\": \"let dt = now(); AzureDiagnostics | summarize count(), avg(DurationMs) by bin(TimeGenerated, 24h), operationId_s, apiId_s | where datetime_part('day', dt) == datetime_part('day', TimeGenerated) | where operationId_s=='GetSecurityQuestions' and apiId_s=='vehicles' ;\", \"timespan\": \"PT24H\"\r\n\t\r\n}";
+        settings.data =   "{ \r\n\"query\": \"let dt = now(); AzureDiagnostics | summarize count(), avg(DurationMs) by bin(TimeGenerated, 24h), operationId_s, apiId_s | where datetime_part('day', dt) == datetime_part('day', TimeGenerated) | where operationId_s=='GetSecurityQuestions' and apiId_s=='vehicles' ;\", \"timespan\": \"PT24H\"\r\n\t\r\n}";
 
         var r = $.ajax(settings);
 
@@ -467,7 +467,7 @@ module.exports = function (controller) {
                     "average response time for 'Login' of the API, sessions","average response time for Login of the API, sessions"], 
                     'direct_message,direct_mention', function (bot, message) {
 
-        settings.data =  "data": "{ \r\n\"query\": \"let dt = now(); AzureDiagnostics | summarize count(), avg(DurationMs) by bin(TimeGenerated, 24h), operationId_s, apiId_s | where datetime_part('day', dt) == datetime_part('day', TimeGenerated) | where operationId_s=='Login' and apiId_s=='sessions' ;\", \"timespan\": \"PT24H\"\r\n\t\r\n}";
+        settings.data =  "{ \r\n\"query\": \"let dt = now(); AzureDiagnostics | summarize count(), avg(DurationMs) by bin(TimeGenerated, 24h), operationId_s, apiId_s | where datetime_part('day', dt) == datetime_part('day', TimeGenerated) | where operationId_s=='Login' and apiId_s=='sessions' ;\", \"timespan\": \"PT24H\"\r\n\t\r\n}";
 
         var r = $.ajax(settings);
 
@@ -493,7 +493,7 @@ module.exports = function (controller) {
                     "average response time for 'Login' of the API, client-gateway-users","average response time for Login of the API, client-gateway-users"], 
                     'direct_message,direct_mention', function (bot, message) {
 
-        settings.data =  "data": "{ \r\n\"query\": \"let dt = now(); AzureDiagnostics | summarize count(), avg(DurationMs) by bin(TimeGenerated, 24h), operationId_s, apiId_s | where datetime_part('day', dt) == datetime_part('day', TimeGenerated) | where operationId_s=='Login' and apiId_s=='client-gateway-users' ;\", \"timespan\": \"PT24H\"\r\n\t\r\n}";
+        settings.data =  "{ \r\n\"query\": \"let dt = now(); AzureDiagnostics | summarize count(), avg(DurationMs) by bin(TimeGenerated, 24h), operationId_s, apiId_s | where datetime_part('day', dt) == datetime_part('day', TimeGenerated) | where operationId_s=='Login' and apiId_s=='client-gateway-users' ;\", \"timespan\": \"PT24H\"\r\n\t\r\n}";
 
         var r = $.ajax(settings);
 
@@ -519,7 +519,7 @@ module.exports = function (controller) {
                     "average response time for 'Login' of the API, vehicles","average response time for Login of the API, vehicles"], 
                     'direct_message,direct_mention', function (bot, message) {
 
-        settings.data =  "data": "{ \r\n\"query\": \"let dt = now(); AzureDiagnostics | summarize count(), avg(DurationMs) by bin(TimeGenerated, 24h), operationId_s, apiId_s | where datetime_part('day', dt) == datetime_part('day', TimeGenerated) | where operationId_s=='Login' and apiId_s=='vehicles' ;\", \"timespan\": \"PT24H\"\r\n\t\r\n}";
+        settings.data =   "{ \r\n\"query\": \"let dt = now(); AzureDiagnostics | summarize count(), avg(DurationMs) by bin(TimeGenerated, 24h), operationId_s, apiId_s | where datetime_part('day', dt) == datetime_part('day', TimeGenerated) | where operationId_s=='Login' and apiId_s=='vehicles' ;\", \"timespan\": \"PT24H\"\r\n\t\r\n}";
 
         var r = $.ajax(settings);
 

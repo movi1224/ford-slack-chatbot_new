@@ -2,7 +2,7 @@
 // |__) /  \  |  |__/ |  |  
 // |__) \__/  |  |  \ |  |  
 
-// This is the main file for the slackbot bot.
+// This is the main file for the starter-slack bot.
 
 // Import Botkit's core features
 const { Botkit } = require('botkit');
@@ -19,7 +19,7 @@ require('dotenv').config();
 
 let storage = null;
 if (process.env.MONGO_URI) {
-    storage = mongoStorage = new MongoDbStorage({
+    storage = new MongoDbStorage({
         url : process.env.MONGO_URI,
     });
 }
@@ -57,6 +57,7 @@ adapter.use(new SlackMessageTypeMiddleware());
 
 
 const controller = new Botkit({
+    
     webhook_uri: '/api/messages',
 
     adapter: adapter,
@@ -66,7 +67,7 @@ const controller = new Botkit({
 
 if (process.env.cms_uri) {
     controller.usePlugin(new BotkitCMSHelper({
-        uri: process.env.cms_uri,
+        cms_uri: process.env.cms_uri,
         token: process.env.cms_token,
     }));
 }
@@ -92,18 +93,11 @@ controller.ready(() => {
 
 });
 
-
-
 controller.webserver.get('/', (req, res) => {
 
     res.send(`This app is running Botkit ${ controller.version }.`);
 
 });
-
-
-
-
-
 
 controller.webserver.get('/install', (req, res) => {
     // getInstallLink points to slack's oauth endpoint and includes clientId and scopes
@@ -165,4 +159,3 @@ async function getBotUserByTeam(teamId) {
         console.error('Team not found in userCache: ', teamId);
     }
 }
-
